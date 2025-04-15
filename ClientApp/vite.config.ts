@@ -39,13 +39,18 @@ export default defineConfig({
         }),
         svelte()
     ],
+    base: "/",
+    assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.mp4', '**/*.webm'],
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "src"),
+            "@assets": path.resolve(__dirname, "src/assets"),
         },
     },
     build: {
         outDir,
+        assetsDir: "assets",
+        assetsInlineLimit: 4096,
         emptyOutDir: true,
     },
 })

@@ -19,6 +19,7 @@
     "@inertiajs/inertia-svelte": "^0.8.0",
     "axios": "^1.8.4",
     "laravel-vite-plugin": "^1.2.0",
-    "@types/node": "^22.14.1"
+    "@types/node": "^22.14.1",
+    "sass-embedded": "^1.86.3"
   }
 }

@@ -15,7 +15,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
 
 // Setup Identity
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+builder.Services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false;
     options.Password.RequireDigit = true;
@@ -79,6 +79,13 @@ builder.Services.AddControllersWithViews();
 
 // Setup Inertia
 builder.Services.AddInertia();
+builder.Services.AddViteHelper(options =>
+{
+    options.PublicDirectory = "wwwroot";
+    options.BuildDirectory = "build";
+    options.HotFile = "hot";
+    options.ManifestFilename = "manifest.json";
+});
 
 // Configure the HTTP request pipeline
 var app = builder.Build();
@@ -107,5 +114,7 @@ app.UseInertia();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapFallbackToFile("index.html");
 
 app.Run();
