@@ -3,7 +3,9 @@
   "general": {
     "logo": "Logo",
     "selectCountry": "Choisissez un pays",
-    "selectCurrency": "Choisissez une devise"
+    "selectCurrency": "Choisissez une devise",
+    "english": "",
+    "french": ""
   },
   "account": {
     "creation": "Création de compte",
