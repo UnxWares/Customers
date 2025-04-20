@@ -1,0 +1,3 @@
+files:
+  - source: /ClientApp/src/Locales/en.json
+    translation: /ClientApp/src/Locales/%two_letters_code%.json
