@@ -3,7 +3,9 @@
   "general": {
     "logo": "Logo",
     "selectCountry": "Select a country",
-    "selectCurrency": "Select a currency"
+    "selectCurrency": "Select a currency",
+    "english": "",
+    "french": ""
   },
   "account": {
     "creation": "Account Creation",
