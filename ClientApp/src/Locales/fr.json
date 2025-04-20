@@ -24,10 +24,10 @@
     "email": "Email",
     "register": "S'inscrire",
     "terms": {
-      "title": "Conditions du compte",
-      "acceptanceText": "J'accepte les {termsLink} et la {privacyLink} de {companyName}",
-      "termsOfUse": "Conditions d'utilisation",
-      "privacyPolicy": "Politique de confidentialité"
+      "title": "Account Terms",
+      "acceptanceText": "I accept the {termsLink} and {privacyLink} of {companyName}",
+      "termsOfUse": "Terms Of Use",
+      "privacyPolicy": "Privacy Policy"
     }
   },
   "billing": {
@@ -42,27 +42,27 @@
   },
   "password": {
     "strength": {
-      "veryWeak": "Très faible",
-      "weak": "Faible",
-      "medium": "Moyen",
-      "strong": "Fort",
-      "veryStrong": "Très fort"
+      "veryWeak": "Very weak",
+      "weak": "Weak",
+      "medium": "Medium",
+      "strong": "Strong",
+      "veryStrong": "Very strong"
     },
-    "label": "Mot de passe",
+    "label": "Password",
     "requirements": {
-      "title": "Exigences du mot de passe",
-      "minLength": "Min. 12 caractères",
-      "uppercase": "Min. 1 majuscule",
-      "lowercase": "Min. 1 minuscule",
-      "number": "Min. 1 chiffre",
-      "special": "Min. 2 caractères spéciaux"
+      "title": "Password requirements",
+      "minLength": "Min. 12 characters",
+      "uppercase": "Min. 1 uppercase letter",
+      "lowercase": "Min. 1 lowercase letter",
+      "number": "Min. 1 number",
+      "special": "Min. 2 special characters"
     },
-    "confirm": "Confirmer le mot de passe",
-    "mismatch": "Les mots de passe ne correspondent pas"
+    "confirm": "Confirm password",
+    "mismatch": "Passwords don't match"
   },
   "phone": {
-    "label": "Téléphone",
-    "selectPrefix": "Choisissez un préfix",
+    "label": "Phone",
+    "selectPrefix": "Select a prefix",
     "placeholder": "6 12 34 56 78"
   }
 }
