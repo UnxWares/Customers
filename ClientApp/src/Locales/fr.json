@@ -4,8 +4,8 @@
     "logo": "Logo",
     "selectCountry": "Choisissez un pays",
     "selectCurrency": "Choisissez une devise",
-    "english": "",
-    "french": ""
+    "english": "Anglais",
+    "french": "Français"
   },
   "account": {
     "creation": "Création de compte",
