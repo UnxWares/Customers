@@ -1,0 +1,35 @@
+{
+  "loading": "Chargement",
+  "general": {
+    "logo": "Logo",
+    "selectCountry": "Choisissez un pays",
+    "selectCurrency": "Choisissez une devise"
+  },
+  "account": {
+    "creation": "Création de compte",
+    "selectType": "Sélectionnez votre type de compte",
+    "type": {
+      "individual": "Particulier",
+      "business": "Entreprise"
+    },
+    "information": "Informations du compte",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "businessName": "Nom de l'entreprise",
+    "businessId": "Numéro SIRET",
+    "contactEmail": "Adresse email de contact",
+    "security": "Sécurité du compte",
+    "email": "Email",
+    "register": "S'inscrire"
+  },
+  "billing": {
+    "information": "Informations de facturation",
+    "address": "Adresse",
+    "city": "Ville",
+    "state": "Région",
+    "postalCode": "Code postal",
+    "country": "Pays",
+    "preferredCurrency": "Devise préférée",
+    "vatNumber": "Numéro de TVA"
+  }
+}

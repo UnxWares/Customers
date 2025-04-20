@@ -54,13 +54,10 @@
 
   .content {
     flex: 1;
-    min-height: 100%;
-    overflow: auto;
   }
 
   footer {
     display: flex;
-    position: fixed;
     width: 100%;
     bottom: 0;
     flex-direction: column;

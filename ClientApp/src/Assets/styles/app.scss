@@ -1,5 +1,14 @@
-﻿:root {
-  
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  font-family: "Twemoji Country Flags", "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #050C9C;
+  --accent-color: #3572EF;
+  --tertiary-color: #3ABEF9;
+  --background-color: #F7F7F7;
 }
 
 root {
@@ -12,4 +21,24 @@ root {
 html, body {
   margin: 0;
   padding: 0;
+}
+
+// Scroll Bar
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
 }

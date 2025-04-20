@@ -1,4 +1,5 @@
 using Customers.Data;
+using Customers.Middlewares;
 using Customers.Models;
 using InertiaCore.Extensions;
 using Microsoft.AspNetCore.Identity;
@@ -75,7 +76,10 @@ builder.Services.ConfigureApplicationCookie(options =>
     });
     
 // Setup MVC
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.Add<InertiaSharedDataMiddleware>();
+});
 
 // Setup Inertia
 builder.Services.AddInertia();

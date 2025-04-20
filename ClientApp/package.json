@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
+    "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json",
+    "extract:locales": "svelte-i18n extract \"src/**/*.svelte\" src/Locales/en.json"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
@@ -17,9 +18,12 @@
     "typescript": "~5.7.2",
     "vite": "^6.2.0",
     "@inertiajs/inertia-svelte": "^0.8.0",
+    "@inertiajs/inertia": "^0.11.0",
     "axios": "^1.8.4",
     "laravel-vite-plugin": "^1.2.0",
     "@types/node": "^22.14.1",
-    "sass-embedded": "^1.86.3"
+    "sass-embedded": "^1.86.3",
+    "country-flag-emoji-polyfill": "^0.1.8",
+    "svelte-i18n": "^4.0.1"
   }
 }

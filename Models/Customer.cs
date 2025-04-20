@@ -1,4 +1,6 @@
-﻿namespace Customers.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Customers.Models;
 
 public enum CustomerType
 {
@@ -16,21 +18,19 @@ public class Customer
     public ApplicationUser User { get; set; } = null!;
     public IndividualCustomer? Individual { get; set; }
     public BusinessCustomer? Business { get; set; }
+    public BillingInformation? Billing { get; set; }
 }
 
 public class IndividualCustomer
 {
     public Guid CustomerId { get; set; } // PK + FK
     
+    [Required, MaxLength(100)]
     public string FirstName { get; set; } = null!;
+    [Required, MaxLength(100)]
     public string LastName { get; set; } = null!;
-    public string Address { get; set; } = null!;
-    public string City { get; set; } = null!;
-    public string State { get; set; } = null!;
-    public string PostalCode { get; set; } = null!;
-    public string Country { get; set; } = null!;
-    public string PhoneNumber { get; set; } = null!;
-    public string Email { get; set; } = null!;
+    [MaxLength(20)]
+    public string? PhoneNumber { get; set; } = null!;
     
     public Customer Customer { get; set; } = null!;
 }
@@ -39,14 +39,13 @@ public class BusinessCustomer
 {
     public Guid CustomerId { get; set; } // PK + FK
 
+    [Required, MaxLength(200)]
     public string Name { get; set; } = null!;
-    public string Address { get; set; } = null!;
-    public string City { get; set; } = null!;
-    public string State { get; set; } = null!;
-    public string PostalCode { get; set; } = null!;
-    public string Country { get; set; } = null!;
+    [MaxLength(100)]
+    public string? LegalForm { get; set; }
+    [MaxLength(50)]
     public string BusinessIdNumber { get; set; } = null!;
-    public string VatNumber { get; set; } = null!;
+    [MaxLength(100)]
     public string ContactAddress { get; set; } = null!;
 
     public Customer Customer { get; set; } = null!;

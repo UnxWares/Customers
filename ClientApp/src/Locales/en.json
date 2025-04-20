@@ -1,0 +1,35 @@
+{
+  "loading": "Loading",
+  "general": {
+    "logo": "Logo",
+    "selectCountry": "Select a country",
+    "selectCurrency": "Select a currency"
+  },
+  "account": {
+    "creation": "Account Creation",
+    "selectType": "Select your account type",
+    "type": {
+      "individual": "Individual",
+      "business": "Business"
+    },
+    "information": "Account Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "businessName": "Business Name",
+    "businessId": "Business ID",
+    "contactEmail": "Contact Email",
+    "security": "Account Security",
+    "email": "Email",
+    "register": "Register"
+  },
+  "billing": {
+    "information": "Billing Information",
+    "address": "Address",
+    "city": "City",
+    "state": "State/Region",
+    "postalCode": "Postal Code",
+    "country": "Country",
+    "preferredCurrency": "Preferred Currency",
+    "vatNumber": "VAT Number"
+  }
+}

@@ -2,7 +2,13 @@
 import { mount } from 'svelte'
 import '@assets/styles/app.scss'
 import "./bootstrap";
+import "./Lib/I18n";
 import Layout from "./Lib/Layout.svelte";
+import { polyfillCountryFlagEmojis } from "country-flag-emoji-polyfill";
+import App from "./App.svelte";
+
+/* Fix chromium emojis issue on Windows */
+polyfillCountryFlagEmojis();
 
 createInertiaApp({
     resolve: name => {
@@ -11,7 +17,13 @@ createInertiaApp({
         
         return { default: page.default, layout: page.layout || Layout }
     },
-    setup({ el, App, props }) {
-        mount(App, { target: el, props })
+    setup({ el, App: InertiaApp, props }) {
+        mount(App, {
+            target: el,
+            props: {
+                initialPage: props.initialPage,
+                resolveComponent: props.resolveComponent
+            }
+        })
     },
 })

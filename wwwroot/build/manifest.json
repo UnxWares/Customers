@@ -1,8 +1,23 @@
 {
+  "src/Assets/images/logo.png": {
+    "file": "assets/logo-Bh1-c3Ld.png",
+    "src": "src/Assets/images/logo.png"
+  },
+  "src/Assets/videos/background.mp4": {
+    "file": "assets/background-DGvB5b3a.mp4",
+    "src": "src/Assets/videos/background.mp4"
+  },
   "src/app.ts": {
-    "file": "assets/app-BftsYuo_.js",
+    "file": "assets/app-ChaHaFOA.js",
     "name": "app",
     "src": "src/app.ts",
-    "isEntry": true
+    "isEntry": true,
+    "css": [
+      "assets/app-CB4P3xTN.css"
+    ],
+    "assets": [
+      "assets/logo-Bh1-c3Ld.png",
+      "assets/background-DGvB5b3a.mp4"
+    ]
   }
 }
