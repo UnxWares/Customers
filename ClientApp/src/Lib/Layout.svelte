@@ -1,6 +1,8 @@
 ﻿<script>
+    import { locale } from "svelte-i18n";
     import {inertia} from "@inertiajs/inertia-svelte";
     import backgroundVideo from "@assets/videos/background.mp4";
+    import LocaleSwitcher from "@/Lib/Components/LocaleSwitcher.svelte";
 
     let {children} = $props();
 </script>
@@ -26,6 +28,8 @@
             <a href="/privacy">Privacy</a>
             <a href="/contact">Support</a>
         </nav>
+        
+        <LocaleSwitcher currentLocale={$locale} />
     </footer>
 </main>
 
