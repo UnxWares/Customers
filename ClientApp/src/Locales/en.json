@@ -4,8 +4,8 @@
     "logo": "Logo",
     "selectCountry": "Select a country",
     "selectCurrency": "Select a currency",
-    "english": "",
-    "french": ""
+    "english": "English",
+    "french": "French"
   },
   "account": {
     "creation": "Account Creation",
