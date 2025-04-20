@@ -22,7 +22,13 @@
     "contactEmail": "Adresse email de contact",
     "security": "Sécurité du compte",
     "email": "Email",
-    "register": "S'inscrire"
+    "register": "S'inscrire",
+    "terms": {
+      "title": "Conditions du compte",
+      "acceptanceText": "J'accepte les {termsLink} et la {privacyLink} de {companyName}",
+      "termsOfUse": "Conditions d'utilisation",
+      "privacyPolicy": "Politique de confidentialité"
+    }
   },
   "billing": {
     "information": "Informations de facturation",
@@ -33,5 +39,30 @@
     "country": "Pays",
     "preferredCurrency": "Devise préférée",
     "vatNumber": "Numéro de TVA"
+  },
+  "password": {
+    "strength": {
+      "veryWeak": "Très faible",
+      "weak": "Faible",
+      "medium": "Moyen",
+      "strong": "Fort",
+      "veryStrong": "Très fort"
+    },
+    "label": "Mot de passe",
+    "requirements": {
+      "title": "Exigences du mot de passe",
+      "minLength": "Min. 12 caractères",
+      "uppercase": "Min. 1 majuscule",
+      "lowercase": "Min. 1 minuscule",
+      "number": "Min. 1 chiffre",
+      "special": "Min. 2 caractères spéciaux"
+    },
+    "confirm": "Confirmer le mot de passe",
+    "mismatch": "Les mots de passe ne correspondent pas"
+  },
+  "phone": {
+    "label": "Téléphone",
+    "selectPrefix": "Choisissez un préfix",
+    "placeholder": "6 12 34 56 78"
   }
 }

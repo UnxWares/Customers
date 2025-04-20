@@ -7,13 +7,29 @@
     "file": "assets/background-DGvB5b3a.mp4",
     "src": "src/Assets/videos/background.mp4"
   },
+  "src/Locales/en.json": {
+    "file": "assets/en-D2ucze7i.js",
+    "name": "en",
+    "src": "src/Locales/en.json",
+    "isDynamicEntry": true
+  },
+  "src/Locales/fr.json": {
+    "file": "assets/fr-B7AurCI5.js",
+    "name": "fr",
+    "src": "src/Locales/fr.json",
+    "isDynamicEntry": true
+  },
   "src/app.ts": {
-    "file": "assets/app-ChaHaFOA.js",
+    "file": "assets/app-CXINTzQa.js",
     "name": "app",
     "src": "src/app.ts",
     "isEntry": true,
+    "dynamicImports": [
+      "src/Locales/en.json",
+      "src/Locales/fr.json"
+    ],
     "css": [
-      "assets/app-CB4P3xTN.css"
+      "assets/app-Bwv7z5-8.css"
     ],
     "assets": [
       "assets/logo-Bh1-c3Ld.png",

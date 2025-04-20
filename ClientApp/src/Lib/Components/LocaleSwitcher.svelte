@@ -13,6 +13,8 @@
     function changeLocale(event) {
         event.preventDefault();
         $locale = event.target.value;
+        
+        window.location.reload();
     }
 </script>
 

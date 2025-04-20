@@ -49,15 +49,15 @@
                         <PhoneNumberInput />
                     {:else}
                         <div class="input-container">
-                            <label for="businessName">{$_('account.businessName')}</label>
+                            <label for="businessName">{$_('account.businessName')}*</label>
                             <input id="businessName" type="text">
                         </div>
                         <div class="input-container">
-                            <label for="businessId">{$_('account.businessId')}</label>
+                            <label for="businessId">{$_('account.businessId')}*</label>
                             <input id="businessId" type="text">
                         </div>
                         <div class="input-container">
-                            <label for="contactAddress">{$_('account.contactEmail')}</label>
+                            <label for="contactAddress">{$_('account.contactEmail')}*</label>
                             <input id="contactAddress" type="text">
                         </div>
                     {/if}
@@ -86,7 +86,7 @@
                 </div>
                 <div class="form-group">
                     <div class="input-container">
-                        <label for="billingCountry">{$_('billing.country')}</label>
+                        <label for="billingCountry">{$_('billing.country')}*</label>
                         <select id="billingCountry" bind:value={selectedCountry}>
                             <option value="" disabled>{$_('general.selectCountry')}</option>
                             {#each countries as country}
@@ -97,7 +97,7 @@
                         </select>
                     </div>
                     <div class="input-container">
-                        <label for="preferredCurrency">{$_('billing.preferredCurrency')}</label>
+                        <label for="preferredCurrency">{$_('billing.preferredCurrency')}*</label>
                         <select id="preferredCurrency" bind:value={selectedCurrency}>
                             <option value="" disabled>{$_('general.selectCurrency')}</option>
                             {#each currencies as currency}
@@ -127,6 +127,23 @@
                 </div>
 
                 <PasswordInput bind:password bind:confirmPassword />
+
+                <h2 class="sub-title">{$_('account.terms.title')}</h2>
+                <div class="form-group">
+                    <div class="input-container checkbox-container">
+                        <input id="terms" type="checkbox">
+                        <label for="terms">
+                            {@html $_('account.terms.acceptanceText', {
+                                values: {
+                                    //@ts-ignore
+                                    termsLink: `<a style="color: var(--primary-color);text-decoration: none;" target="_blank" href="https://unxwares.com/terms">${$_('account.terms.termsOfUse')}</a>`,
+                                    privacyLink: `<a style="color: var(--primary-color);text-decoration: none;" target="_blank" href="https://unxwares.com/privacy">${$_('account.terms.privacyPolicy')}</a>`,
+                                    companyName: 'UnxWares' 
+                                }
+                            })}*
+                        </label>
+                    </div>
+                </div>
 
                 <button type="submit" class="submit-btn">{$_('account.register')}</button>
             </form>
@@ -264,39 +281,41 @@
       .checkbox-container {
         flex-direction: row;
         align-items: center;
+        width: 100%;
+        flex: 1;
 
         input {
           width: auto;
           margin-right: 5px;
-
-          &:focus {
-            outline: none;
-            border-color: var(--primary-color);
-          }
+          color: var(--primary-color);
+          border-color: var(--primary-color);
         }
 
         label {
           margin-bottom: 0;
+          font-size: 0.85rem;
         }
       }
 
       .submit-btn {
-        background-image: url('https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871');
-        background-position: center;
+        background-image: url('@assets/webp/nav-bg-fill-blue.webp');
         background-repeat: repeat-x;
-        color: white;
-        padding: 8px 20px;
-        border: none;
-        border-radius: 5px;
+        background-position: 0 -100%;
+        transition: 1s ease;
+        color: var(--accent-color);
+        padding: 8px 15px;
         cursor: pointer;
-        font-weight: bold;
-        margin-top: 15px;
-        align-self: center;
-        transition: 0.3s ease;
+        border: 1px solid var(--accent-color);
+        border-radius: 8px;
+        flex: 1;
+        margin-left: 50% - 15%;
+        text-align: center;
+        font-size: 0.9rem;
+        width: 30%;
 
         &:hover {
-          opacity: 0.9;
-          transform: scale(1.02);
+          background-position: center;
+          color: white;
         }
       }
     }

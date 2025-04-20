@@ -22,7 +22,13 @@
     "contactEmail": "Contact Email",
     "security": "Account Security",
     "email": "Email",
-    "register": "Register"
+    "register": "Register",
+    "terms": {
+      "title": "Account Terms",
+      "acceptanceText": "I accept the {termsLink} and {privacyLink} of {companyName}",
+      "termsOfUse": "Terms Of Use",
+      "privacyPolicy": "Privacy Policy"
+    }
   },
   "billing": {
     "information": "Billing Information",
@@ -33,5 +39,30 @@
     "country": "Country",
     "preferredCurrency": "Preferred Currency",
     "vatNumber": "VAT Number"
+  },
+  "password": {
+    "strength": {
+      "veryWeak": "Very weak",
+      "weak": "Weak",
+      "medium": "Medium",
+      "strong": "Strong",
+      "veryStrong": "Very strong"
+    },
+    "label": "Password",
+    "requirements": {
+      "title": "Password requirements",
+      "minLength": "Min. 12 characters",
+      "uppercase": "Min. 1 uppercase letter",
+      "lowercase": "Min. 1 lowercase letter",
+      "number": "Min. 1 number",
+      "special": "Min. 2 special characters"
+    },
+    "confirm": "Confirm password",
+    "mismatch": "Passwords don't match"
+  },
+  "phone": {
+    "label": "Phone",
+    "selectPrefix": "Select a prefix",
+    "placeholder": "6 12 34 56 78"
   }
 }

@@ -1,18 +1,23 @@
 ﻿<script lang="ts">
+    import { _ } from "svelte-i18n";
     import {page} from '@inertiajs/inertia-svelte'
     import type {AppProps, PhonePrefix} from "@/types";
     const {phonePrefixes, locale} = $page.props as AppProps;
-    
+
     let selectedPrefix: PhonePrefix = $state('');
     let phoneNumber = $state('');
+
+    $effect(() => {
+        phoneNumber = phoneNumber.replace(/[^0-9]/g, '');
+    })
 </script>
 
 <div class="form-group">
     <div class="input-container">
-        <label for="phoneNumber">Téléphone</label>
+        <label for="phoneNumber">{$_('phone.label')}</label>
         <div class="phone-input-wrapper">
             <select bind:value={selectedPrefix}>
-                <option value="" disabled>Choisissez un préfix</option>
+                <option value="" disabled>{$_('phone.selectPrefix')}</option>
                 {#each phonePrefixes as prefix}
                     <option value={prefix}>
                         {prefix.emoji} {prefix.code} +{prefix.dialCode}
@@ -23,7 +28,7 @@
                    type="tel"
                    bind:value={phoneNumber}
                    maxlength="20"
-                   placeholder="6 12 34 56 78">
+                   placeholder={$_('phone.placeholder')}>
         </div>
     </div>
 </div>
@@ -56,7 +61,7 @@
       width: 100%;
       box-sizing: border-box;
       font-size: 0.9rem;
-      
+
       &:focus {
         outline: none;
         border-color: var(--primary-color);

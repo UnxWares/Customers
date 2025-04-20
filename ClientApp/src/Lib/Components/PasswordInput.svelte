@@ -1,4 +1,6 @@
 ﻿<script lang="ts">
+    import { _ } from "svelte-i18n";
+
     interface Props {
         password?: string;
         confirmPassword?: string;
@@ -54,19 +56,19 @@
 
         // Update feedback and color
         if (passwordStrength <= 1) {
-            passwordFeedback = "Très faible";
+            passwordFeedback = $_('password.strength.veryWeak');
             passwordColor = "red";
         } else if (passwordStrength === 2) {
-            passwordFeedback = "Faible";
+            passwordFeedback = $_('password.strength.weak');
             passwordColor = "orangered";
         } else if (passwordStrength === 3) {
-            passwordFeedback = "Moyen";
+            passwordFeedback = $_('password.strength.medium');
             passwordColor = "orange";
         } else if (passwordStrength === 4) {
-            passwordFeedback = "Fort";
+            passwordFeedback = $_('password.strength.strong');
             passwordColor = "yellowgreen";
         } else if (passwordStrength === 5) {
-            passwordFeedback = "Très fort";
+            passwordFeedback = $_('password.strength.veryStrong');
             passwordColor = "green";
         }
     }
@@ -74,7 +76,7 @@
 
 <div class="form-group">
     <div class="input-container password-container">
-        <label for="password">Mot de passe*</label>
+        <label for="password">{$_('password.label')}*</label>
         <div class="password-input-wrapper">
             <input
                     id="password"
@@ -85,33 +87,33 @@
             <div class="password-requirements-tooltip">
                 <span class="info-icon">i</span>
                 <div class="tooltip-content">
-                    <h4>Exigences du mot de passe:</h4>
+                    <h4>{$_('password.requirements.title')}:</h4>
                     <ul>
                         <li class={meetsLength ? "met" : ""}>
                             <span class="check-icon">{meetsLength ? "✓" : "✗"}</span>
-                            Min. 12 caractères
+                            {$_('password.requirements.minLength')}
                         </li>
                         <li class={meetsUppercase ? "met" : ""}>
                             <span class="check-icon">{meetsUppercase ? "✓" : "✗"}</span>
-                            Min. 1 majuscule
+                            {$_('password.requirements.uppercase')}
                         </li>
                         <li class={meetsLowercase ? "met" : ""}>
                             <span class="check-icon">{meetsLowercase ? "✓" : "✗"}</span>
-                            Min. 1 minuscule
+                            {$_('password.requirements.lowercase')}
                         </li>
                         <li class={meetsNumber ? "met" : ""}>
                             <span class="check-icon">{meetsNumber ? "✓" : "✗"}</span>
-                            Min. 1 chiffre
+                            {$_('password.requirements.number')}
                         </li>
                         <li class={meetsSpecial ? "met" : ""}>
                             <span class="check-icon">{meetsSpecial ? "✓" : "✗"}</span>
-                            Min. 2 caractères spéciaux
+                            {$_('password.requirements.special')}
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        
+
         <div class="password-strength-meter">
             <div class="strength-bar">
                 <div
@@ -126,7 +128,7 @@
     </div>
 
     <div class="input-container">
-        <label for="confirmPassword">Confirmer le mot de passe*</label>
+        <label for="confirmPassword">{$_('password.confirm')}*</label>
         <input
                 id="confirmPassword"
                 type="password"
@@ -134,7 +136,7 @@
 
         {#if confirmPassword && password !== confirmPassword}
             <div class="password-mismatch">
-                Les mots de passe ne correspondent pas
+                {$_('password.mismatch')}
             </div>
         {/if}
     </div>
